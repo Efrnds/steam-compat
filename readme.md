@@ -7,20 +7,35 @@ Este projeto realiza **análise de compatibilidade de jogos Steam** com o seu PC
 ## 📁 Estrutura do Projeto
 
 steam-compat/
+<br/>
 ├─ backend/
+<br/>
 │ ├─ src/
+<br/>
 │ │ ├─ index.js # Entrada do backend, executa scraping e gera JSON
+<br/>
 │ │ ├─ scrapeSteam.js # Funções para coletar jogos e requisitos da Steam
+<br/>
 │ │ ├─ analyze.js # Função para analisar compatibilidade do PC
+<br/>
 │ │ └─ utils.js # Funções auxiliares: benchmarks, normalização, busca aproximada
+<br/>
 │ └─ data/
+<br/>
 │ ├─ CPU_UserBenchmarks.csv
+<br/>
 │ └─ GPU_UserBenchmarks.csv
+<br/>
 ├─ frontend/
+<br/>
 │ ├─ src/
+<br/>
 │ │ ├─ App.jsx # Componente principal
+<br/>
 │ │ └─ components/
+<br/>
 │ │ └─ GameCard.jsx # Card individual de cada jogo
+<br/>
 └─ README.md
 
 

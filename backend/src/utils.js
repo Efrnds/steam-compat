@@ -23,7 +23,9 @@ export function loadBenchmarks() {
 export function findClosest(name, db) {
   const keys = Object.keys(db);
   const match = stringSimilarity.findBestMatch(name.toLowerCase(), keys);
-  return db[match.bestMatch.target] || 0;
+  const score = db[match.bestMatch.target] || 0;
+  const quality = match.bestMatch.rating; // 0-1, quanto mais próximo de 1 melhor
+  return { score, quality };
 }
 
 export function normalizeScore(r) {
